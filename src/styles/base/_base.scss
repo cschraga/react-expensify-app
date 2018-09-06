@@ -1,0 +1,27 @@
+//rems have better accessiblity than pixels
+
+html {
+    font-size: 62.5%;  //this converts rems to 10px each
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #a5afd7;
+}
+
+h1 {
+    font-size: 2.22rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.is-active {
+    font-weight: bold;
+    color: darkorchid;
+}
