@@ -2,7 +2,7 @@
 
 
 const path   = require('path'); //get path library
-const mypath = path.join(__dirname,'public'); //use join method to get right absolute dir and add public to it
+const mypath = path.join(__dirname,'public', 'dist'); //use join method to get right absolute dir and add public to it
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => {
@@ -52,8 +52,9 @@ module.exports = (env) => {
         ],
         devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
-            contentBase: mypath,
-            historyApiFallback: true
+            contentBase: path.join(__dirname,'public'),
+            historyApiFallback: true,
+            publicPath: '/dist/'
         }
     }
     
